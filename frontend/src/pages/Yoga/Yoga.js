@@ -288,9 +288,15 @@ function Yoga() {
               className="pose-img h-[480px] w-[500px]"
               alt="pose"
             />
-            <div className="flex flex-col justify-between items-center border w-full h-[480px]">
-              <h1>{poseTime}</h1>
-              <h1>{bestPerform}</h1>
+            <div className="flex flex-col justify-between items-center w-full h-[480px]">
+              <div className="text-md p-4 rounded-xl shadow-md border border-gray-500">
+                <h1>Pose Time</h1>
+                <h1>{poseTime}</h1>
+              </div>
+              <div className="text-md p-4 rounded-xl shadow-md border border-gray-500">
+                <h1>Best Time</h1>
+                <h1>{bestPerform}</h1>
+              </div>
             </div>
           </div>
         </div>

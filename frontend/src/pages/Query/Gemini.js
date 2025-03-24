@@ -22,9 +22,8 @@ export default function YogaFitnessGuide() {
   async function generateText(data) {
     setLoading(true);
     try {
-      const genAI = new GoogleGenerativeAI(
-        "AIzaSyDeZHd3qyOFdEnROI1uFqg7p-V-LsFMz3k"
-      );
+      const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API_KEY);
+
       const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
       const prompt = `Prompt is ${data.prompt}; explain about the provided prompt in detail in plain text paragraphs without any special characters, or formatting symbols, or stars.`;
       const result = await model.generateContent(prompt);
