@@ -10,10 +10,10 @@ export const poseImages = {
     Tree: tree,
     Cobra: cobra,
     Dog: dog,
-    Warrior: warrior,
     Chair: chair,
     Traingle: traingle,
-    Shoulderstand: shoulderstand
+    Shoulderstand: shoulderstand,
+    Warrior: warrior,
 } 
 
 

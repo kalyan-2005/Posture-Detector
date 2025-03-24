@@ -1,41 +1,22 @@
-import React from 'react'
+import React from "react";
 
-import { poseImages } from '../../utils/pose_images'
+import { poseImages } from "../../utils/pose_images";
 
-import './DropDown.css'
+import "./DropDown.css";
 
 export default function DropDown({ poseList, currentPose, setCurrentPose }) {
-return (
-        <div
-        className='dropdown dropdown-container'
-         
-      >
-        <button 
-            className="btn btn-secondary dropdown-toggle"
-            type='button'
-            data-bs-toggle="dropdown"
-            id="pose-dropdown-btn"
-            aria-expanded="false"
-        >{currentPose}
-        </button>
-        <ul class="dropdown-menu dropdown-custom-menu" aria-labelledby="dropdownMenuButton1">
-            {poseList.map((pose) => (
-                <li onClick={() => setCurrentPose(pose)}>
-                    <div class="dropdown-item-container">
-                        <p className="dropdown-item-1">{pose}</p>
-                        <img 
-                            src={poseImages[pose]}
-                            className="dropdown-img"
-                        />
-                        
-                    </div>
-                </li>
-            ))}
-            
-        </ul>
-              
-          
+  return (
+    <div className="h-[620px] overflow-auto w-[20%] sticky top-16">
+      <div>
+        {poseList.map((pose) => (
+          <div onClick={() => setCurrentPose(pose)}>
+            <div class="shadow-md rounded-md">
+              <img src={poseImages[pose]} className="" alt={pose} />
+              <p className="text-center uppercase font-semibold text-xs py-1 tracking-widest">{pose}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    )
+    </div>
+  );
 }
- 
