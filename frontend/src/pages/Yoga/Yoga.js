@@ -17,10 +17,10 @@ import { FiActivity } from "react-icons/fi";
 let skeletonColor = "rgb(255,255,255)";
 let poseList = [
   "Tree",
-  "Chair",
-  "Cobra",
-  "Dog",
-  "Shoulderstand",
+  // "Chair",
+  // "Cobra",
+  // "Dog",
+  // "Shoulderstand",
   "Traingle",
   "Warrior",
 ];
